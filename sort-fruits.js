@@ -20,27 +20,27 @@ var list = [{
   'qty': 3
 }];
 
-var newlist = []
+var newList = []
 for(var i = 0; i < list.length; i++) {
-  if (newlist.length === 0) {
-    newlist.push(list[0])
-  } else if (list[i].qty > newlist[newlist.length-1].qty) {
-    newlist.push(list[i])
+  if (newList.length === 0) {
+    newList.push(list[0])
+  } else if (list[i].qty > newList[newList.length-1].qty) {
+    newList.push(list[i])
   } else {
-    for (var j = 0; j < newlist.length; j++) {
-      if (list[i].qty < newlist[j].qty) {
-        newlist.unshift(list[i])
+    for (var j = 0; j < newList.length; j++) {
+      if (list[i].qty < newList[j].qty) {
+        newList.unshift(list[i])
         break;
-      } else if (list[i].qty > newlist[j].qty && list[i].qty <= newlist[j+1].qty) {
-        newlist.splice(j+1, 0, list[i])
+      } else if (list[i].qty > newList[j].qty && list[i].qty <= newList[j+1].qty) {
+        newList.splice(j+1, 0, list[i])
         break;
       }
     }
   }
 };
 
-for(var i = 0; i < newlist.length; i++) {
-  newlist[i] = newlist[i].name
+for(var i = 0; i < newList.length; i++) {
+  newList[i] = newList[i].name
 }
 
-console.log('sorted by qty:', newlist.toString())
+console.log('sorted by qty:', newList.toString())
