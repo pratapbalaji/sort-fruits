@@ -1,4 +1,4 @@
-var list = [{
+const list = [{
   'name': 'apple',
   'type': 'tree',
   'qty': 3
@@ -20,7 +20,7 @@ var list = [{
   'qty': 3
 }];
 
-var newList = list.sort(function (a, b) {
+const newList = list.sort(function (a, b) {
   return a.qty - b.qty
 }).map(function (fruit) {
   return fruit.name
